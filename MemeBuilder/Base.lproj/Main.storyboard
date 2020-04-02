@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="YD8-VL-5gF">
-                                <rect key="frame" x="0.0" y="852" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="847" width="414" height="49"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="MEv-fD-chK"/>
                                     <barButtonItem title="Camera" image="camera" catalog="system" id="SZ8-MQ-cJ4">
@@ -37,7 +37,7 @@
                                 </items>
                             </toolbar>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x2T-7h-BNL">
-                                <rect key="frame" x="20" y="103" width="374" height="60"/>
+                                <rect key="frame" x="20" y="89" width="374" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="LSS-lr-osW"/>
                                 </constraints>
@@ -67,7 +67,7 @@
                             <constraint firstAttribute="bottom" secondItem="YD8-VL-5gF" secondAttribute="bottom" symbolic="YES" id="lAM-Bw-xmF"/>
                             <constraint firstItem="5QS-IJ-TKR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="nLk-Nx-2fm"/>
                             <constraint firstItem="5QS-IJ-TKR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pWm-da-d5x"/>
-                            <constraint firstItem="x2T-7h-BNL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="yj1-We-3S1"/>
+                            <constraint firstItem="x2T-7h-BNL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="1" id="yj1-We-3S1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
