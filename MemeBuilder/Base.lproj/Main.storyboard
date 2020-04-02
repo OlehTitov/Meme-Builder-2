@@ -45,7 +45,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Krz-4a-hzY">
-                                <rect key="frame" x="20" y="781" width="374" height="60"/>
+                                <rect key="frame" x="20" y="796" width="374" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="6np-pW-4fm"/>
                                 </constraints>
@@ -55,7 +55,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="5QS-IJ-TKR" firstAttribute="bottom" secondItem="Krz-4a-hzY" secondAttribute="bottom" constant="55" id="8WW-xI-jfk"/>
+                            <constraint firstItem="5QS-IJ-TKR" firstAttribute="bottom" secondItem="Krz-4a-hzY" secondAttribute="bottom" constant="40" id="8WW-xI-jfk"/>
                             <constraint firstItem="YD8-VL-5gF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LAt-Nq-0m9"/>
                             <constraint firstItem="YD8-VL-5gF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="O6T-w3-nct"/>
                             <constraint firstAttribute="bottom" secondItem="5QS-IJ-TKR" secondAttribute="bottom" id="bVm-3c-7ww"/>
