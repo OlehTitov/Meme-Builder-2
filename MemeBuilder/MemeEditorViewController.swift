@@ -102,7 +102,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         navigationController?.isNavigationBarHidden = hide
         toolbar.isHidden = hide
     }
-    
+
     func memeGenerator() -> UIImage {
         hideToolbars(true)
         let renderer = UIGraphicsImageRenderer(size: view.bounds.size)
