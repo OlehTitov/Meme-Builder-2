@@ -13,9 +13,7 @@ extension MemeEditorViewController {
     
     //Start tracking when keyboard appears
     func subscribeToKeyboardNotifications() {
-
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
@@ -26,7 +24,6 @@ extension MemeEditorViewController {
     }
     
     @objc func keyboardWillShow(_ notification:Notification) {
-        
         //Move the entire view up if the bottom textfield is edited
         if bottomTextField.isEditing {
             view.frame.origin.y -= getKeyboardHeight(notification)
@@ -40,7 +37,6 @@ extension MemeEditorViewController {
     }
 
     func getKeyboardHeight(_ notification:Notification) -> CGFloat {
-
         let userInfo = notification.userInfo
         let keyboardSize = userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue // of CGRect
         return keyboardSize.cgRectValue.height

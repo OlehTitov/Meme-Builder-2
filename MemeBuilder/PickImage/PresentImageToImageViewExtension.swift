@@ -13,12 +13,10 @@ extension MemeEditorViewController {
     
     //Ensure that picked image will display in the image view
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
         if let selectedImage = info[.originalImage] as? UIImage {
             imageView.image = selectedImage
         }
             dismiss(animated: true, completion: nil)
-        
     }
     
 }

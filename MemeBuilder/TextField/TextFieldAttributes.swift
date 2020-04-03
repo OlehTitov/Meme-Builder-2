@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 struct TextAttributes {
-    
    //Define the style of the text in meme
     static var memeTextAttributes: [NSAttributedString.Key: Any] = [
         .strokeColor: UIColor.black,

@@ -14,7 +14,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     var memedImage: UIImage! = nil
     let dismissKeyboardDelegate = DismissKeyboardDelegate()
     
-
 //MARK: - OUTLETS
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var topTextField: UITextField!
@@ -24,7 +23,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
 //MARK: - VIEW WILL APPEAR
     override func viewWillAppear(_ animated: Bool) {
-
         super.viewWillAppear(animated)
         //Start tracking if keyboard appears
         subscribeToKeyboardNotifications()
@@ -32,11 +30,9 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
 
 //MARK: - VIEW WILL DISAPPEAR
     override func viewWillDisappear(_ animated: Bool) {
-
         super.viewWillDisappear(animated)
         //Stop tracking if keyboard appears
         unsubscribeFromKeyboardNotifications()
-        
     }
     
 //MARK: - VIEW DID LOAD
@@ -48,6 +44,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         setPlaceholderImage()
         setImageViewBackgroundColor()
     }
+    
 //MARK: - ACTIONS
     @IBAction func pickFromCamera(_ sender: Any) {
         callImagePickerController(.camera)
@@ -74,7 +71,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     func setPlaceholderImage() {
         imageView.image = UIImage(named: "sunflower")
-        
     }
     
     func setImageViewBackgroundColor() {
@@ -122,7 +118,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         let item = [generatedImage]
         let shareController = UIActivityViewController(activityItems: item as [Any], applicationActivities: nil)
         present(shareController, animated: true)
-        
         //Enable popover for Ipad
         if let popOver = shareController.popoverPresentationController {
         popOver.sourceView = self.view
