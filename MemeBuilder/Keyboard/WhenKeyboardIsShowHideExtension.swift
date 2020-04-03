@@ -21,8 +21,8 @@ extension MemeEditorViewController {
     
     //Stop tracking when keyboard appears
     func unsubscribeFromKeyboardNotifications() {
-
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        //Remove all notification without specifying exact name
+        NotificationCenter.default.removeObserver(self)
     }
     
     @objc func keyboardWillShow(_ notification:Notification) {
