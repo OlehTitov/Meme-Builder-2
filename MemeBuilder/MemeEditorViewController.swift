@@ -43,9 +43,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
 //MARK: - VIEW DID LOAD
     override func viewDidLoad() {
         super.viewDidLoad()
-        delegateTextFieldsToDismissKeyboard()
-        applyDefaultTextFieldAttributes()
-        setPlaceholderTopAndBottomText()
+        setupTextFieldStyle(toTextField: topTextField, defaultText: "TOP TEXT")
+        setupTextFieldStyle(toTextField: bottomTextField, defaultText: "BOTTOM TEXT")
         setPlaceholderImage()
         setImageViewBackgroundColor()
     }
@@ -66,17 +65,11 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     }
     
 //MARK: - FUNCTIONS
-    func applyDefaultTextFieldAttributes() {
-        bottomTextField.defaultTextAttributes = TextAttributes.memeTextAttributes
-        topTextField.defaultTextAttributes = TextAttributes.memeTextAttributes
-        topTextField.textAlignment = NSTextAlignment.center
-        bottomTextField.textAlignment = NSTextAlignment.center
-    }
-    
-    func setPlaceholderTopAndBottomText() {
-    
-        topTextField.attributedPlaceholder = NSAttributedString(string: "TOP TEXT", attributes: TextAttributes.memeTextAttributes)
-        bottomTextField.attributedPlaceholder = NSAttributedString(string: "BOTTOM TEXT", attributes: TextAttributes.memeTextAttributes)
+    func setupTextFieldStyle(toTextField textField: UITextField, defaultText: String) {
+        textField.defaultTextAttributes = TextAttributes.memeTextAttributes
+        textField.textAlignment = NSTextAlignment.center
+        textField.attributedPlaceholder = NSAttributedString(string: defaultText, attributes: TextAttributes.memeTextAttributes)
+        textField.delegate = dismissKeyboardDelegate
     }
     
     func setPlaceholderImage() {
@@ -103,11 +96,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         topTextField.text = ""
         bottomTextField.text = ""
         setPlaceholderImage()
-    }
-    
-    func delegateTextFieldsToDismissKeyboard() {
-        self.topTextField.delegate = dismissKeyboardDelegate
-        self.bottomTextField.delegate = dismissKeyboardDelegate
     }
     
     func hideToolbars(_ hide: Bool) {
