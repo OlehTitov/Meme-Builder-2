@@ -8,6 +8,8 @@
 	<string>Allow camera usage to create memes</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Allow photo library usage to create memes</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Allow access to photo library to save the meme</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
