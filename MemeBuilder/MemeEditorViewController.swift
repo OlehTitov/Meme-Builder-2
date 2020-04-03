@@ -110,27 +110,18 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         self.bottomTextField.delegate = dismissKeyboardDelegate
     }
     
-    func hideToolbarAndNavbar() {
-        navigationController?.isNavigationBarHidden = true
-        toolbar.isHidden = true
-    }
-    
-    func showToolbarAndNavbar() {
-        navigationController?.isNavigationBarHidden = false
-        toolbar.isHidden = false
+    func hideToolbars(_ hide: Bool) {
+        navigationController?.isNavigationBarHidden = hide
+        toolbar.isHidden = hide
     }
     
     func memeGenerator() -> UIImage {
-        
-        hideToolbarAndNavbar()
-        
+        hideToolbars(true)
         let renderer = UIGraphicsImageRenderer(size: view.bounds.size)
         memedImage = renderer.image { ctx in
             view.drawHierarchy(in: view.bounds, afterScreenUpdates: true)
         }
-        
-        showToolbarAndNavbar()
-
+        hideToolbars(false)
         return memedImage
     }
     
