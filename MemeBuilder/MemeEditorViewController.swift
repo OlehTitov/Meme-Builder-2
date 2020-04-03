@@ -28,7 +28,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         super.viewWillAppear(animated)
         //Start tracking if keyboard appears
         subscribeToKeyboardNotifications()
-        disableCameraButtonIfDeviceHasNoCamera()
     }
 
 //MARK: - VIEW WILL DISAPPEAR
@@ -43,6 +42,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
 //MARK: - VIEW DID LOAD
     override func viewDidLoad() {
         super.viewDidLoad()
+        disableCameraButtonIfDeviceHasNoCamera()
         setupTextFieldStyle(toTextField: topTextField, defaultText: "TOP TEXT")
         setupTextFieldStyle(toTextField: bottomTextField, defaultText: "BOTTOM TEXT")
         setPlaceholderImage()
