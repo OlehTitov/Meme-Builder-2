@@ -18,6 +18,13 @@
 		7C93161E24352CAE00F74AC8 /* PresentImageToImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C93161D24352CAE00F74AC8 /* PresentImageToImageViewExtension.swift */; };
 		7C9316202435AED700F74AC8 /* DismissKeyboardDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C93161F2435AED700F74AC8 /* DismissKeyboardDelegate.swift */; };
 		7C9316232436188C00F74AC8 /* TextFieldAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9316222436188C00F74AC8 /* TextFieldAttributes.swift */; };
+		7CB2920C243F1101001A66D3 /* SentMemesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB2920B243F1101001A66D3 /* SentMemesCollectionViewController.swift */; };
+		7CB2920E243F1191001A66D3 /* SentMemesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB2920D243F1191001A66D3 /* SentMemesTableViewController.swift */; };
+		7CB292122440295A001A66D3 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB292112440295A001A66D3 /* CustomCollectionViewCell.swift */; };
+		7CB292142440EF9E001A66D3 /* MemeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB292132440EF9E001A66D3 /* MemeDetailViewController.swift */; };
+		7CB2921824439B91001A66D3 /* CustomCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB2921724439B91001A66D3 /* CustomCollectionViewDelegate.swift */; };
+		7CB2921E24448BFF001A66D3 /* UIScrollView+EmptyDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB2921D24448BFF001A66D3 /* UIScrollView+EmptyDataSet.m */; };
+		7CB2922224448E9D001A66D3 /* EmptyStateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB2922124448E9D001A66D3 /* EmptyStateDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +41,15 @@
 		7C93161D24352CAE00F74AC8 /* PresentImageToImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentImageToImageViewExtension.swift; sourceTree = "<group>"; };
 		7C93161F2435AED700F74AC8 /* DismissKeyboardDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboardDelegate.swift; sourceTree = "<group>"; };
 		7C9316222436188C00F74AC8 /* TextFieldAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldAttributes.swift; sourceTree = "<group>"; };
+		7CB2920B243F1101001A66D3 /* SentMemesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentMemesCollectionViewController.swift; sourceTree = "<group>"; };
+		7CB2920D243F1191001A66D3 /* SentMemesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentMemesTableViewController.swift; sourceTree = "<group>"; };
+		7CB292112440295A001A66D3 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		7CB292132440EF9E001A66D3 /* MemeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeDetailViewController.swift; sourceTree = "<group>"; };
+		7CB2921724439B91001A66D3 /* CustomCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		7CB2921B24448BFE001A66D3 /* MemeBuilder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MemeBuilder-Bridging-Header.h"; sourceTree = "<group>"; };
+		7CB2921C24448BFF001A66D3 /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
+		7CB2921D24448BFF001A66D3 /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
+		7CB2922124448E9D001A66D3 /* EmptyStateDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,14 +86,19 @@
 				7C4F00C724335EEE00EA84FD /* MemeModel */,
 				7C4F00C824335EFA00EA84FD /* PickImage */,
 				7C4F00C924335F7F00EA84FD /* Keyboard */,
-				7C4F00CC2433638B00EA84FD /* ReadyMeme */,
+				7CA8FB1524473E8C00C8EFD6 /* ViewControllers */,
+				7CB2921724439B91001A66D3 /* CustomCollectionViewDelegate.swift */,
+				7CB2922124448E9D001A66D3 /* EmptyStateDelegate.swift */,
+				7CB292112440295A001A66D3 /* CustomCollectionViewCell.swift */,
 				7C4F00B224335D8F00EA84FD /* AppDelegate.swift */,
-				7C4F00B624335D8F00EA84FD /* MemeEditorViewController.swift */,
 				7C4F00B424335D8F00EA84FD /* SceneDelegate.swift */,
 				7C4F00B824335D8F00EA84FD /* Main.storyboard */,
 				7C4F00BB24335D9500EA84FD /* Assets.xcassets */,
+				7CB2921C24448BFF001A66D3 /* UIScrollView+EmptyDataSet.h */,
+				7CB2921D24448BFF001A66D3 /* UIScrollView+EmptyDataSet.m */,
 				7C4F00BD24335D9500EA84FD /* LaunchScreen.storyboard */,
 				7C4F00C024335D9500EA84FD /* Info.plist */,
+				7CB2921B24448BFE001A66D3 /* MemeBuilder-Bridging-Header.h */,
 			);
 			path = MemeBuilder;
 			sourceTree = "<group>";
@@ -107,19 +128,23 @@
 			path = Keyboard;
 			sourceTree = "<group>";
 		};
-		7C4F00CC2433638B00EA84FD /* ReadyMeme */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ReadyMeme;
-			sourceTree = "<group>";
-		};
 		7C9316212436186700F74AC8 /* TextField */ = {
 			isa = PBXGroup;
 			children = (
 				7C9316222436188C00F74AC8 /* TextFieldAttributes.swift */,
 			);
 			path = TextField;
+			sourceTree = "<group>";
+		};
+		7CA8FB1524473E8C00C8EFD6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7C4F00B624335D8F00EA84FD /* MemeEditorViewController.swift */,
+				7CB292132440EF9E001A66D3 /* MemeDetailViewController.swift */,
+				7CB2920B243F1101001A66D3 /* SentMemesCollectionViewController.swift */,
+				7CB2920D243F1191001A66D3 /* SentMemesTableViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +179,7 @@
 				TargetAttributes = {
 					7C4F00AE24335D8F00EA84FD = {
 						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -194,13 +220,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C4F00B724335D8F00EA84FD /* MemeEditorViewController.swift in Sources */,
+				7CB2921824439B91001A66D3 /* CustomCollectionViewDelegate.swift in Sources */,
 				7C9316202435AED700F74AC8 /* DismissKeyboardDelegate.swift in Sources */,
 				7C4F00B324335D8F00EA84FD /* AppDelegate.swift in Sources */,
+				7CB292142440EF9E001A66D3 /* MemeDetailViewController.swift in Sources */,
+				7CB2920E243F1191001A66D3 /* SentMemesTableViewController.swift in Sources */,
+				7CB2921E24448BFF001A66D3 /* UIScrollView+EmptyDataSet.m in Sources */,
 				7C4F00B524335D8F00EA84FD /* SceneDelegate.swift in Sources */,
 				7C9316232436188C00F74AC8 /* TextFieldAttributes.swift in Sources */,
+				7CB2920C243F1101001A66D3 /* SentMemesCollectionViewController.swift in Sources */,
 				7C93161424339D3000F74AC8 /* MemeStructure.swift in Sources */,
 				7C93161E24352CAE00F74AC8 /* PresentImageToImageViewExtension.swift in Sources */,
 				7C93161A243524D200F74AC8 /* WhenKeyboardIsShowHideExtension.swift in Sources */,
+				7CB292122440295A001A66D3 /* CustomCollectionViewCell.swift in Sources */,
+				7CB2922224448E9D001A66D3 /* EmptyStateDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +377,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3L87G9HDLJ;
 				INFOPLIST_FILE = MemeBuilder/Info.plist;
@@ -354,6 +388,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.OlehTitov.MemeBuilder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MemeBuilder/MemeBuilder-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -363,6 +399,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3L87G9HDLJ;
 				INFOPLIST_FILE = MemeBuilder/Info.plist;
@@ -373,6 +410,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.OlehTitov.MemeBuilder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MemeBuilder/MemeBuilder-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

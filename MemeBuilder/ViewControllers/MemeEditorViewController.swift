@@ -12,6 +12,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
 
 //MARK: - PROPERTIES
     var memedImage: UIImage! = nil
+    let defaultTopText = "TOP TEXT"
+    let defaultBottomText = "BOTTOM TEXT"
     let dismissKeyboardDelegate = DismissKeyboardDelegate()
     
 //MARK: - OUTLETS
@@ -39,8 +41,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         disableCameraButtonIfDeviceHasNoCamera()
-        setupTextFieldStyle(toTextField: topTextField, defaultText: "TOP TEXT")
-        setupTextFieldStyle(toTextField: bottomTextField, defaultText: "BOTTOM TEXT")
+        setupTextFieldStyle(toTextField: topTextField, defaultText: defaultTopText)
+        setupTextFieldStyle(toTextField: bottomTextField, defaultText: defaultBottomText)
         setPlaceholderImage()
         setImageViewBackgroundColor()
     }
@@ -58,7 +60,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         shareMeme()
     }
     @IBAction func cancelButton(_ sender: Any) {
-        resetMeme()
+        //resetMeme()
+        navigationController?.popToRootViewController(animated: true)
     }
     
 //MARK: - FUNCTIONS
@@ -110,7 +113,21 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     }
     
     func save() {
-        _ = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imageView.image!, memedImage: memedImage)
+        let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imageView.image!, memedImage: memedImage, timeStamp: getTimeStamp())
+        // Add it to the memes array in the Application Delegate
+        let object = UIApplication.shared.delegate
+        let appDelegate = object as! AppDelegate
+        appDelegate.memes.append(meme)
+    }
+    
+    //Get the timestamp when the meme was sent
+    func getTimeStamp() -> String {
+        let currentDateTime = Date()
+        let formatter = DateFormatter()
+        formatter.timeStyle = .medium
+        formatter.dateStyle = .long
+        let timeStamp = formatter.string(from: currentDateTime)
+        return "SENT: " + timeStamp
     }
     
     func shareMeme() {
@@ -128,6 +145,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
             if completed {
                 self.save()
                 self.resetMeme()
+                self.navigationController?.popToRootViewController(animated: true)
+                
             }
         }
     }
