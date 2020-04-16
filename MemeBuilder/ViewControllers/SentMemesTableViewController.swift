@@ -34,6 +34,7 @@ class SentMemesTableViewController: UIViewController, UITableViewDataSource, UIT
     
 //MARK: - VIEW WILL APPEAR
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         //Reload table so newly sent memes appear
         table.reloadData()
     }
